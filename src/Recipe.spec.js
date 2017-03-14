@@ -1,12 +1,17 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-const Recipe = ({ title, created }) => {
+const Recipe = ({ title, created, ingredients }) => {
   return (
     <div>
       <div className="header">
         <h2>{title}</h2>
         <span>{created}</span>
+      </div>
+      <div>
+        <div className="left-column">
+          <ul>{ingredients.map((item, idx) => <li key={idx}>{item}</li>)}</ul>
+        </div>
       </div>
     </div>
   );
