@@ -4,8 +4,10 @@ import { shallow } from 'enzyme';
 const Recipe = ({ title, created }) => {
   return (
     <div>
-      <h2>{title}</h2>
-      <span>{created}</span>
+      <div className="header">
+        <h2>{title}</h2>
+        <span>{created}</span>
+      </div>
     </div>
   );
 };
