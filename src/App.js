@@ -13,6 +13,7 @@ class App extends Component {
           <div className="assignment" style={{ padding: '.5em' }}>
             <h2>Assignment: Implement a basic recipe blog</h2>
             <h4 style={{ color: '#F00' }}>Notice: Focus on TDD, do pair programming (1 writes failing test, 1 implements), styling is not important</h4>
+            <h4>Checkout <a href="http://airbnb.io/enzyme/docs/api/shallow.html" target="_blank">Enzyme</a> project documentation - a react testing library</h4>
             <ol>
               <li>Open <code>"./src/first.spec.js"</code> file and run <code>npm test</code> and look around</li>
               <li>Create <code>"./src/Recipe.spec.js"</code> and try to write a failing assertion about non-yet-existing <code>{'<Recipe />'}</code> component that should render "Yummy!"</li>
