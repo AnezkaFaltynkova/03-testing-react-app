@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 // Step 2 - when your test complains, that `<Recipe />` does not exist create a minimal impl
 const Recipe = () => {
   return (
-    <div></div>
+    <div>Holla!</div>
   );
 };
 
