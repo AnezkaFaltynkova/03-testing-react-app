@@ -2,10 +2,11 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 // Step 2 - when your test complains, that `<Recipe />` does not exist create a minimal impl
-const Recipe = ({ title }) => {
+const Recipe = ({ title, created }) => {
   return (
     <div>
       <h2>{title}</h2>
+      <span>{created}</span>
     </div>
   );
 };
