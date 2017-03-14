@@ -1,9 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-const Recipe = () => {
+const Recipe = ({ title }) => {
   return (
-    <div>Holla!</div>
+    <div>
+      <h2>{title}</h2>
+    </div>
   );
 };
 
@@ -14,5 +16,13 @@ describe('Recipe', () => {
     const expected = recipe.title;
     const actual = wrapper.find('h2').text();
     expect(actual).toEqual(expected);
+  });
+
+  it('should render the create date into a span', () => {
+    const recipe = { title: 'Tasty foo bar!', created: 'March 14 2017' };
+    const wrapper = shallow(<Recipe {...recipe}/>);
+    const expected = recipe.created;
+    const actual = wrapper.find('span').text();
+    expect(actual).toEqual(actual);
   });
 });
