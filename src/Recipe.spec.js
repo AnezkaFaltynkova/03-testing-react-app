@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 // Step 2 - when your test complains, that `<Recipe />` does not exist create a minimal impl
-const Recipe = ({ title, created, ingredients }) => {
+const Recipe = ({ title, created, ingredients, instructions }) => {
   return (
     <div>
       <div className="header">
@@ -12,6 +12,9 @@ const Recipe = ({ title, created, ingredients }) => {
       <div>
         <div className="left-column">
           <ul>{ingredients.map((item, idx) => <li key={idx}>{item}</li>)}</ul>
+        </div>
+        <div className="right-column">
+          <ul>{instructions.map((item, idx) => <li key={idx}>{item}</li>)}</ul>
         </div>
       </div>
     </div>
