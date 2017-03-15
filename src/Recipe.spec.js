@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-const Recipe = ({ title, created, ingredients }) => {
+const Recipe = ({ title, created, ingredients, instructions }) => {
   return (
     <div>
       <div className="header">
@@ -11,6 +11,9 @@ const Recipe = ({ title, created, ingredients }) => {
       <div>
         <div className="left-column">
           <ul>{ingredients.map((item, idx) => <li key={idx}>{item}</li>)}</ul>
+        </div>
+        <div className="right-column">
+          <ul>{instructions.map((item, idx) => <li key={idx}>{item}</li>)}</ul>
         </div>
       </div>
     </div>
