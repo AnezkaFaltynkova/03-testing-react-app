@@ -27,6 +27,10 @@ describe('Recipe', () => {
       '100g chocolate',
       '200g flour',
       '2 eggs'
+    ],
+    instructions: [
+      'Put everything into a bowl and mix',
+      'Bake on 200C for 20 minutes'
     ]
   };
 
@@ -53,6 +57,11 @@ describe('Recipe', () => {
       expect(actual).toEqual(expected);
     });
 
-    it('should contain `right` column for instructions');
+    it('should contain `right` column for instructions', () => {
+      const wrapper = shallow(<Recipe {...recipe} />).find('.right-column li');
+      const actual = wrapper.map(node => node.text());
+      const expected = recipe.instructions;
+      expect(actual).toEqual(expected);
+    });
   });
 });
